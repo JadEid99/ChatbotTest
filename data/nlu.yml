@@ -1,0 +1,1593 @@
+version: "2.0"
+nlu:
+- intent: conversation_introduction
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - mornin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hello zaka
+    - hello roze
+- intent: conversation_random
+  examples: |
+    - i want to order food
+    - SOS
+    - call 911
+    - buy
+    - blablabla
+    - i want to watch a movie
+    - i need to exercise
+    - i need
+    - i want to
+    - lets order food
+    - do you know any pizza places?
+    - ?
+    - .
+    - do you know any good movies?
+    - good places to go out
+    - any resto recommendations?
+    - do you know [Jad Eid](name)?
+- intent: conversation_conclusion
+  examples: |
+    - good afternoon
+    - nothing
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - im going to bed
+    - talk to you soon
+    - I dont want to talk now
+    - i dont wanna talk
+    - i dont feel like talking
+    - Im kinda busy now
+    - im busy, talk later
+    - im busy
+- intent: conversation_goodstate
+  examples: |
+    - good
+    - great
+    - not bad
+    - amazing
+    - well
+    - not bad at all
+    - gd
+    - fine
+    - happy
+    - im excited
+- intent: conversation_goodstate_followup
+  examples: |
+    - good, how are you?
+    - great, how about yourself?
+    - not bad, u?
+    - amazing, u?
+    - im doing fine, you?
+    - gd, u?
+    - good and you?
+    - not bad at all, how about you?
+    - good, what about you?
+    - I'm good
+    - dowing well actually
+    - not bad at all
+    - amazing
+    - awesome
+    - divine
+    - just swell
+    - good, thank you for asking
+    - great!
+- intent: conversation_badstate
+  examples: |
+    - bad
+    - not great
+    - not good
+    - could be better
+    - meh
+    - im tired
+    - not so good
+    - horrible
+    - lonely
+    - bored
+    - im bored out of my mind
+    - im so bored
+    - angry
+    - furious
+    - im raging
+    - I am sick
+    - feeling sick
+    - I am in pain
+- intent: conversation_confirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - perhaps
+    - why not
+    - sure why not
+    - sounds like a plan
+    - i like that idea, lets do it
+    - lets do it
+    - sure keep me updated
+    - ya
+    - yes i do
+    - sure
+    - of course
+    - lets do it
+    - lets go for it
+    - for sure
+    - absolutely
+    - I dont see why not
+    - lets continue
+- intent: conversation_deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+- intent: conversation_botchallenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - answer the question
+    - why are you avoiding the question
+    - give me an answer
+    - I asked you a question
+    - why aren't you answering
+    - stop messing with me
+    - are you a bot or not
+    - are you a human or not
+    - you speak like a robot
+    - what are you?
+    - Is this a bot?
+    - Is there a bot chatting to me?
+    - Is it automated message?
+    - Bot or human?
+    - Bot is chatting with me?
+    - Are you system generated message?
+    - Are you robot?
+    - Are you machine?
+    - Are you just computer?
+    - Are you a robot?
+    - Are you a person?
+    - Are you a machine?
+    - Are you a chatbot?
+    - Are you a bot?
+    - Are these automated messages?
+    - Am I talking to a bot?
+    - You are a boy are girl?
+    - You are a bot or human?
+    - This is a machine?
+    - This is a chatbot?
+    - Is this computer based response?
+    - Is this a machine?
+    - Are you a human?
+- intent: conversation_assist
+  examples: |
+    - Need help
+    - I need some info
+    - Will you help me?
+    - What else can you do?
+    - What do you do?
+    - What can you help me with?
+    - What can you do?
+    - What are you good at?
+    - Need help plz
+    - How can you help me
+    - Can you help me?
+    - How can you assist?
+    - How can you help me?
+    - How do you help?
+    - How to help you?
+    - How will you assist me?
+    - i need help
+    - Can you tell some info
+    - Help me please
+    - Can you explain me in one sentence what you are doing?
+    - Can you help me?
+    - Could you please show me what you can
+    - Great, is there anything else you can do, bot?
+    - How can you help me
+    - How you help me?
+    - I need help
+    - I need some help
+    - What are my options
+    - What are you able to do?
+    - What can I ask you?
+    - What can I do?
+    - What can you demo
+    - What can you do
+    - What can you do for me?
+    - What can you do?
+    - What can you tell me?
+    - What do you do
+    - can I ask you anything else?
+    - can you do anything else?
+    - can you help me
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help
+    - help me
+    - help please
+    - help pls
+    - help?
+    - hep me
+    - hi. XTC what do you do?
+    - hm that doesnt quite help me is there anything else you can do?
+    - how can i use you
+    - how can you help me
+    - how can you help me?
+    - how can you help?
+    - how does this work?
+    - how u can help me
+    - how you help me
+    - i asked you if you can do anything else
+    - i don't know what i want
+    - i need help
+    - more info
+    - now what?
+    - options
+    - show me the menu
+    - show me what's possible
+    - so now what
+    - so what can you do
+    - so what can you do?
+    - so what can you help me with?
+    - so what next?
+    - tell me something you can do
+    - tell me what's your skill
+    - um what now
+    - what are all the things you understand?
+    - what are the options?
+    - what are you good at?
+    - what can I ask?
+    - what can I ask you?
+    - what can I do here
+    - what can I do with Kyle?
+    - what can I do with this bot
+    - what can i do here
+    - what can i do now
+    - what can u do
+    - what can we talk about?
+    - what can you answer
+    - what can you do
+    - what can you do for me
+    - what can you do?
+    - what can you offer me?
+    - what can you tell me
+    - what can you?
+    - what cn u do for me ?
+    - what do you do
+    - what do you do?
+    - what do you know except this?
+    - what else can I do here?
+    - what else can i do
+    - what else can i do?
+    - what else can you do?
+    - what else can you help with?
+    - what i have to do
+    - what is this bot for
+    - what u can do
+    - what u can do?
+    - what you can do
+    - what you can do for me?
+    - what you can do?
+    - what you talk about?
+    - you can hep me
+    - what can you teache me?
+    - where do i start
+- intent: conversation_query
+  examples: |
+    - I have a question
+    - Need to ask a query
+    - I need to ask you something
+    - i need to ask a question
+    - I want to ask you something
+    - I have a question for you
+    - Having a query
+    - I have a query for you
+    - I have a query
+    - Have a query for you
+- intent: conversation_meet
+  examples: |
+    - who are you?
+    - what is your name?
+    - introduce yourself at once
+    - introduce yourself
+    - who are you supposed to be?
+    - name
+    - introduce
+    - tell me about yourself
+    - what is your purpose?
+    - What can I call you?
+    - Your name?
+    - Can you tell me your name?
+    - Are you there?
+    - Any one there?
+    - What is your name?
+    - Is anyone there?
+    - Your name is?
+    - Who is chatting?
+    - Tell me about yourself
+    - Who are you?
+    - Who am I chatting with?
+    - What's your name?
+    - What should I say as your name?
+    - Tell me your name
+    - What are you called?
+- intent: conversation_thanks
+  examples: |
+    - thank you!
+    - thanks
+    - thanks a lot
+    - thanks a bunch
+    - thnx
+    - ty
+- intent: conversation_joke
+  examples: |
+    - tell me a joke
+    - do you know any jokes?
+    - i would like a joke
+    - joke
+    - humor me
+    - humour me
+    - what is your humor setting?
+    - tell me something funny
+    - tell me a funny story
+    - tell me another joke
+    - give me another
+- intent: conversation_laughing
+  examples: |
+    - hahahahahah
+    - 😂😂😂
+    - haha
+    - lol
+    - lmao
+    - rofl
+    - lmfao
+    - xaxaxaxaxaxa
+    - jajajajaja
+    - very funny
+    - that was humorous
+- intent: conversation_lame
+  examples: |
+    - that was lame
+    - that joke was horrible
+    - that was not funny
+    - you think thats funny?
+    - that joke was shit
+    - meh bad joke
+    - that was a bad joke
+    - not very funny
+    - can you get funnier?
+    - that was a trash joke
+    - your humour sucks
+    - you should work on your delivery
+    - crappy joke
+- intent: conversation_meaning_life
+  examples: |
+    - what is the meaning of life?
+    - what is life?
+    - why are we alive?
+    - who am I?
+    - what is going on?
+- intent: conversation_bot_state
+  examples: |
+    - sup
+    - whats up
+    - whatsup
+    - how are you?
+    - how you doing?
+    - how are you doing?
+    - how are things?
+    - how is it going?
+    - how is it hanging?
+    - whats going down?
+    - whatsup?
+    - what are your plans tonight?
+    - you got plans?
+    - what are you up to?
+    - are you happy?
+    - are you sad?
+    - everything ok?
+    - hows life?
+    - Ahoy matey how are you?
+    - Are you ok?
+    - Do you feel good?
+    - Do you have a great day?
+    - How are You?
+    - How are things?
+    - How are you
+    - How are you men?
+    - How are you today?
+    - How are you?
+    - what about you?
+    - How was your day?
+    - How you doing?
+    - How's it going
+    - How's it hanging?
+    - How's life treating you friend?
+    - How've you been?
+    - Hows it going
+    - I'm fine and you
+    - Is everything ok?
+    - What's going on?
+    - What's new?
+    - What's up
+    - What's up man
+    - and you
+    - are you alright
+    - are you having a good day
+    - are you ok
+    - are you okay
+    - h r u ?
+    - hello, how are you?
+    - hey how are you?
+    - hi how are you?
+    - hi how u doing
+    - how ?
+    - how are things going
+    - how are things with you?
+    - how are u
+    - how are u?
+    - how are xou
+    - how are you
+    - how are you ?
+    - how are you doing
+    - how are you doing this morning
+    - how are you doing today my sweet friend
+    - how are you doing today?
+    - how are you doing?
+    - how are you feeling
+    - how are you today
+    - how are you'
+    - how are you?
+    - how are you????
+    - how are yuo
+    - how do you do?
+    - how have you been
+    - how is it going
+    - how is your day
+    - how is your day going
+    - how is your evening
+    - how r u
+    - how r u ?
+    - how you doing
+    - how you doing?
+    - how's it going?
+    - how's life
+    - how's life been treating you?
+    - how's your day going
+    - howareyou
+    - hw r u?
+    - is everything all right
+    - is everything okay
+    - okay hi how are you?
+    - wassup
+    - what about your day
+    - what are you up to?
+    - what's good
+    - what's up
+    - whatchcha doing
+    - whatchya upto ?
+    - whats goin on
+    - whats new
+    - yow are you
+    - how are you zaka
+    - Hey, how's it going
+- intent: conversation_botbirthday
+  examples: |
+    - when is your birthday?
+    - when were you born?
+    - when were you created?
+    - when do you celebrate your birthday?
+    - how old are you?
+    - what is your age?
+- intent: conversation_stop
+  examples: |
+    - nevermind.
+    - I changed my mind
+    - I no longer want to subscribe
+    - I dont want this anymore.
+    - ignore my previous request
+    - stop
+    - nvm
+    - forget it
+    - i dont want to give you my email
+    - please stop
+    - stop collecting my information
+    - i dont want to continue with this
+    - i dont feel safe giving you my information
+    - i dont want to give you my number
+    - i dont want to give you my name
+    - khalas
+    - let it go
+    - forget about it
+    - leave me alone
+    - dont bother with that anymore
+    - stop with that shut
+    - dont collect my fucking info
+    - let it be bro
+    - you gotta stop collecting info
+    - i dont want to be hacked, leave me alone
+    - i dont want to give you my info
+    - i dont feel safe doing this
+    - i dont trust you yet
+- intent: conversation_botorigins_query
+  examples: |
+    - where are you from?
+    - who made you?
+    - what is your origin?
+    - where do you come from?
+    - are you manmade?
+    - who programmed you?
+    - By whom were you built?
+    - Can I ask the name of the people who designed you?
+    - Do you know who built you?
+    - Do you know who made you?
+    - May I ask who invented you?
+    - Name the person who built you.
+    - Tell me the name of the individual who created you.
+    - Tell me the name of the person who built you.
+    - Tell me the name of your creator.
+    - Tell me who built you.
+    - What is the name of your builder?
+    - What person built you?
+    - Who built you?
+    - Who created and built you?
+    - Who created you?
+    - Who designed you?
+    - Who developed and created you?
+    - Who developed you?
+    - Who fabricated you?
+    - Who generated you?
+    - Who is it that built you?
+    - Who is responsible for making you?
+    - Who is the builder of you?
+    - Who is the legal owner of you?
+    - Who is the name of your builder?
+    - Who is the name of your creator?
+    - Who is the person responsible for building you?
+    - Who is the person that invented you?
+    - Who is the person who built you?
+    - Who is your creator?
+    - Who is your programmer?
+    - Who made you?
+    - Who modeled you?
+    - Who owns you?
+    - Who produced you?
+    - Who put you together?
+    - Who thought to make you?
+    - Who was the one that built you?
+    - Who was the one who made you?
+    - Who was the person that built you?
+    - Who was the person that created you?
+    - Who was the person that made you?
+    - Who was the person who made you?
+    - Who was the person who put you together?
+    - Who went through the trouble of setting you up?
+    - Who were you built by?
+    - Who were you created by?
+    - Who were you made by?
+    - Who's your boss?
+    - Who's your builder?
+    - and who built u?
+    - can you share your boss with me?
+    - i want to get to know your owner
+    - i want to know the company which designed you
+    - i want to know the company which generated you
+    - i want to know the company which invented you
+    - i want to know who invented you
+    - please tell me the company who created you
+    - please tell me who created you
+    - tell me more about you
+    - tell me more about your creators
+    - tell me more about your founders
+    - what is the name of the smart engineer who creted you ?
+    - where were you made?
+    - which company brought you into existence?
+    - which company created you?
+    - which company invented you?
+    - who are created you
+    - who are your author?
+    - who are your parents
+    - who build you
+    - who built u?
+    - who built you
+    - who built you?
+    - who create you ?
+    - who created you
+    - who created you?
+    - who developed
+    - who developed you
+    - who do you work for?
+    - who had the idea to build you?
+    - who had the idea to generate you?
+    - who had the idea to make you?
+    - who invent you
+    - who is behind all this?
+    - who is your author
+    - who is your boss
+    - who is your boss tell me
+    - who is your boss?
+    - who is your creator
+    - who is your creator?
+    - who is your daddy
+    - who is your employer?
+    - who is your father ?
+    - who is your mom
+    - who is your parent?
+    - who made you
+    - who your author are?
+    - who's builder
+    - why were you made?
+    - you are made by who?
+    - you are working for which company?
+    - who is the author of zaka
+    - what is you mother name
+    - what is father name
+    - who is your mother
+    - who is your father
+- intent: conversation_botcreation_query
+  examples: |
+    - By what means were you made?
+    - By what method were you fashioned?
+    - Can you explain how you were created?
+    - Can you give me an idea as to how you were created?
+    - Can you say how you were constructed?
+    - Do you know how you were built?
+    - Do you know how you were made?
+    - How did they build you?
+    - How did they create you?
+    - How did they make you?
+    - How did you come into being?
+    - How did you come to be?
+    - How exactly were you devised?
+    - How exactly were you made?
+    - How were you built?
+    - How were you conceived?
+    - How were you constructed?
+    - How were you devised?
+    - How were you formed?
+    - How were you made into who you are?
+    - How were you made?
+    - How were you materialized?
+    - How were you set up?
+    - I want to know how you were formed
+    - I'd like to know how you were created
+    - I'd like to know how you were put together?
+    - In what manner were you built?
+    - In what manner were you constructed?
+    - In what manner were you formed?
+    - In what way were you created?
+    - In what way were you formed?
+    - In what way were you made?
+    - In what way were you shaped?
+    - In which manner were you devised?
+    - Let me know how you were made exactly
+    - Specify how you were created?
+    - Tell me how you were made?
+    - What process was used to build you?
+    - What process was used to create you?
+    - What was the process for making you?
+    - You originated through what means?
+    - how have you been built?
+    - how were you made?
+    - in what way were you made?
+    - so how were you made?
+    - what are you made of
+    - Are you built using zaka?
+    - Are u developed in zaka
+    - are you build with zaka ?
+- intent: conversation_botlocation
+  examples: |
+    - where are you from?
+    - where are you based?
+    - where are you located?
+    - where do you live?
+    - what is your address?
+    - where is your house?
+- intent: conversation_botsucks
+  examples: |
+    - this bot sucks
+    - you suck
+    - you cant even answer my questions
+    - why are you so shit
+    - fuck this it sucks
+    - you are shit
+    - cant answer my questions
+    - this bot isnt so good
+    - this is bad
+    - this bot is horrible
+    - you are so annoying
+    - Can you get any worse?
+    - this is the worst
+    - please get smarter before we talk again
+    - you are so stupid
+    - This is bad
+    - You are quite bad
+    - Zaka is very bad
+    - Zaka is bad
+    - u broke my heart
+    - you are bad
+    - you are bad bot
+    - you make me sad
+    - bots are bad
+    - Although I understand youre still in development, I feel a little bit disappointed.
+    - Surely you're not so smart like i thought
+    - you are disappointing
+    - This tool is horrible
+- intent: conversation_botimpresses
+  examples: |
+    - wow this bot is great!
+    - wow
+    - nice!
+    - very cool bot
+    - you are very smart
+    - amazing!
+    - i love you
+    - i love this bot
+    - i like you
+    - you are a beautiful bot
+    - very clever bot
+    - very smart bot
+- intent: conversation_confused
+  examples: |
+    - i am confused
+    - what do you mean?
+    - i dont understand
+    - can you explain a little more?
+    - please clarify this
+    - can you provide some more detail?
+    - what?
+    - wat?
+    - huh?
+    - hm?
+    - what the fuck does that mean?
+- intent: conversation_sorry
+  examples: |
+    - i am sorry
+    - im sorry
+    - woops my mistake
+- intent: conversation_hug
+  examples: |
+    - i need a hug
+    - i need some love
+    - give me a hug
+    - i need some sugar
+- intent: conversation_wait
+  examples: |
+    - wait a minute
+    - hold on please
+    - give me a minute
+    - just a second please
+    - give me a moment
+    - gimme a sec
+    - wait
+- intent: conversation_talk
+  examples: |
+    - can we talk?
+    - lets talk
+    - wanna talk
+    - i just wanna talk
+    - lets have a conversation
+- intent: conversation_userbirthday
+  examples: |
+    - it is my birthday today
+    - its my birthday
+    - i was born today
+    - today is my birthday
+- intent: conversation_pleasure
+  examples: |
+    - it was a pleasure to talk to you
+    - it was nice talking to you
+    - thanks for the chat, it was nice
+    - pleasure talking to you
+    - loved talking to you, thanks!
+    - nice meeting you
+    - nice to meet you
+    - nice to talk to you again
+    - Delighted to make your acquaintance.
+    - Feels great to see you!
+    - Glad to finally meet you!
+    - Glad to make your acquaintance.
+    - Glad to meet you
+    - Glad to meet you!
+    - Glad to meet you.
+    - Glad we've met.
+    - Good to meet you!
+    - Good to see you!
+    - Great interacting with you
+    - Great seeing you
+    - Great to meet you!
+    - Great to meet you.
+    - Happy to get to see you.
+    - Hi, glad to meet you.
+    - Hi, nice to meet you!
+    - I am glad I met you.
+    - I am glad he introduced us.
+    - I had a great meeting with you
+    - I'm glad to have met you!
+    - I'm glad to meet you!
+    - I'm happy that we have met!
+    - I'm pleased to meet you!
+    - I'm so happy that I could meet you.
+    - I'm thrilled to meet you!
+    - It is indeed a pleasure to be able to meet you.
+    - It was a pleasure to have your company.
+    - It was nice to have met you
+    - It's a pleasure to make your acquaintance!
+    - It's a pleasure to meet you!
+    - It's good that I could meet you. It was a pleasure.
+    - It's great to get to know you!
+    - It's great to make your acquaintance!
+    - It's nice to finally meet you.
+    - It's wonderful to meet you!
+    - It’s a pleasure to meet you
+    - It’s great connecting with you.
+    - Lovely to meet you.
+    - Nice to have met you.
+    - Pleased to make your acquaintance!
+    - Pleased to meet you!
+    - Pleased to meet you.
+    - See you around. It was a pleasure meeting you.
+    - Thank you for this meeting. It was great to see you.
+    - nice to meet you
+- intent: conversation_gender
+  examples: |
+    - are you male or female?
+    - what is your gender?
+    - do you have a gender?
+    - are you a he or a she?
+- intent: entity_name
+  examples: |
+    - [xavier woods](name)
+    - here is my name [tony stark](name)
+    - my name is [thor odinson](name)
+    - this [mohammed rogers](name) is my name
+    - here is my name: [natasha romanoff](name)
+    - [jad eid](name) is my name
+    - this is it [thomas](name)
+    - this is it: [christophe](name)
+    - [jad](name)
+    - my name is [patrick](name)
+    - I am [Patrick](name)
+    - [salwa](name)
+    - [Jad Eid](name)
+    - [Xavier](name)
+    - [Jennie Kram](name)
+    - [Porter Backman](name)
+    - [Herman Onstad](name)
+    - [Joycelyn Yamasaki](name)
+    - [Juliet Donatelli](name)
+    - [Alessandra Low](name)
+    - [Arnetta Constance](name)
+    - [Rebbecca Kratz](name)
+    - [Kasey Searcy](name)
+    - [Isabell Keenan](name)
+    - [Sonia Bagdon](name)
+    - [Francesca Slover](name)
+    - [Reynaldo Shute](name)
+    - [Tyrone Castorena](name)
+    - [Valeri Peace](name)
+    - [Bernadine Sharp](name)
+    - [Charlott Seidell](name)
+    - [Jacinda Seidman](name)
+    - [Berry Decker](name)
+    - [Jackie Mcclard](name)
+    - [Etsuko Elder](name)
+    - [Sandy Velasco](name)
+    - [Tory Cormack](name)
+    - [Ike Elfrink](name)
+    - [Camille Oltman](name)
+    - [Azucena Treanor](name)
+    - [Melvin Morefield](name)
+    - [Isabel Infante](name)
+    - [Alejandra Rothenberger](name)
+    - [Demarcus Lurie](name)
+- intent: entity_email
+  examples: |
+    - [ejad.home@gmail.com](email)
+    - here is my email [jad.eid01@lau.edu](email)
+    - my email is [jad@zaka.ai](email)
+    - this [jad.eid@bhs.edu.lb](email) is my email
+    - here is my email: [ejad_home@yahoo.com](email)
+    - [email@hotmail.com](email) is my email
+    - this is it [patrick.saliba94@gmail.com](email)
+    - this is it: [mama_slayer@randomdomain.me](email)
+    - [xziemann@gmail.com](email)
+    - [tre.kozey@yahoo.com](email)
+    - [edonnelly@yahoo.com](email)
+    - [sturcotte@wiza.net](email)
+    - [aabshire@jaskolski.com](email)
+    - [lavon08@hotmail.com](email)
+    - [homenick.adaline@rippin.net](email)
+    - [vickie.okeefe@ledner.org](email)
+    - [jamaal76@yahoo.com](email)
+    - [weber.santa@padberg.biz](email)
+    - [aileen02@yahoo.com](email)
+    - [schulist.enos@yahoo.com](email)
+    - [angeline62@schneider.net](email)
+    - [greenfelder.marty@gmail.com](email)
+    - [friedrich04@gmail.com](email)
+    - [streich.sage@streich.com](email)
+    - [nharber@gmail.com](email)
+    - [thiel.emmie@schumm.org](email)
+    - [era.koch@ziemann.com](email)
+    - [bode.celia@gmail.com](email)
+    - [kraig78@anderson.com](email)
+    - [libbie.yundt@yahoo.com](email)
+    - [grimes.rosella@hermann.org](email)
+    - [qhickle@gmail.com](email)
+    - [vonrueden.jerome@yahoo.com](email)
+    - [landen.lesch@hotmail.com](email)
+    - [stokes.zena@gmail.com](email)
+    - [nquitzon@yahoo.com](email)
+    - [padberg.nick@bernier.biz](email)
+    - [tod17@hotmail.com](email)
+- intent: entity_age
+  examples: |
+    - [18](age)
+    - i am [23](age) years old
+    - my age is [35](age)
+    - [52](age)
+    - [69](age)
+    - [12](age)
+    - [7](age)
+    - [20](age)
+    - [25](age)
+    - [100](age)
+    - [99])age)
+    - [124](age)
+    - my name is [chris](name) and I am [30](age) years old
+- intent: entity_phone
+  examples: |
+    - [0096170223103](phone)
+    - this is my number [+9613901942](phone)
+    - my number is [03 091 342](phone)
+    - [71 120 390](phone)
+    - [+971 050 7124189](phone)
+    - [00971560921903](phone)
+    - [(101)9012901)](phone)
+    - [+1-202-555-0107](phone)
+    - [+1-202-555-0156](phone)
+    - [+1-202-555-0154](phone)
+    - [+1-202-555-0106](phone)
+    - [+1-202-555-0153](phone)
+    - [+1-202-555-0128](phone)
+    - [00961/70/411891](phone)
+- intent: entity_occupation
+  examples: |
+    - [2 weeks](occupation)
+    - [3 days](occupation)
+    - i have been coding for [10 years](occupation)
+    - [7 years](occupation)
+    - [I have never coded](occupation)
+    - i have been coding [forever](occupation)
+    - [15 months](occupation)
+    - [10 minutes](occupation)
+    - [0](occupation)
+    - I have [never](occupation) coded
+    - [never before](occupation)
+    - I [havent](occupation) coded yet
+    - [Not yet](occupation) but I want to learn
+    - I [havent coded yet](occupation) but Im looking to learn
+    - This will be my [first time](occupation)
+    - I have done a [little](occupation) coding
+    - [not much](occupation)
+    - [not very long](occupation)
+    - [not long](occupation)
+    - [a short while](occupation)
+    - I [don't know how](occupation) to code
+    - [what's coding?](occupation)
+    - [never before](occupation)
+    - [The best coder ever](occupation)
+    - [Moderately long](occupation)
+    - [New to coding](occupation)
+- intent: entity_topic
+  examples: |
+    - [Machine learning](topic)
+    - [AI](topic)
+    - [ML](topic)
+    - I want to become an expert in [computer vision](topic)
+    - something about [natural language processing](topic)
+    - give me a course on [deep learning](topic)
+    - i want to know [Artificial intelligence](topic)
+    - I want to learn about [neural networks](topic)
+    - surprise me
+    - i want to learn anything
+    - give me whatever course you have
+    - I want to subscribe to the [machine learning](topic) program
+    - I want to learn about the [artificial intelligence](topic) program
+    - I want to join the [ai](topic) program
+    - I want the [ml](topic) class
+    - [ai](topic) program
+    - [ml](topic) program
+    - [artificial intelligence](topic) program
+    - [machine learning](topic) program
+    - join the [machine learning](topic) specialization
+    - register the [artificial intelligence](topic) specialization
+    - give me the [ai](topic) specialization
+    - I want the [ml](topic) specialization
+    - [ai](topic) specialization
+    - [ml](topic) specialization
+    - [artificial intelligence](topic) specialization
+    - [machine learning](topic) specialization
+    - I'll have the [neural network](topic) program
+    - I chose the [NN](topic) program
+    - give me the [neural network](topic) track
+    - [NN](topic) program
+    - put my name down for the [Artificial Neural Network](topic) specialization
+    - register the [deep learning](topic) program
+    - [deep learning](topic) program
+    - give me the [data science](topic) program
+    - [data science](topic) track
+    - let me have the [natural language processing](topic) track
+    - gimme the [NLP](topic) track
+    - [natural language processing](topic) specialization
+    - let me have the [time series analysis](topic) program
+    - [time series analysis](topic) specialization
+    - give me the [computer vision](topic) program
+    - [computer vision](topic) track
+    - register me to the [recommender systems](topic) program
+    - this [recommender systems](topic) specialization
+    - why not the [reinforcement learning](topic) track
+    - [reinforcement learning](topic) specialization
+    - [philosophy](topic)
+    - [science](topic)
+    - [math](topic)
+    - [physcics](topic)
+    - [computer science](topic)
+    - [magic](topic)
+    - [food](topic)
+    - [nutrition](topic)
+    - [sports science](topic)
+    - [gym](topic)
+    - [biology](topic)
+    - [chemistry](topic)
+    - [math](topic)
+    - [programming](topic)
+    - [english literature](topic)
+    - [networking](topic)
+    - [history](topic)
+- intent: entity_none
+  examples: |
+    - I don't have a phone
+    - I dont have a number
+    - I dont have an email
+    - I dont have a name
+    - I dont have an email
+    - no email sorry
+    - no phone sorry
+    - I dont have a name
+    - I prefer to remain anonymous
+    - I cant give you that information
+    - Im sorry, I dont have a name
+    - That information is unavailable
+    - i dont have that
+    - I dont have one
+    - I cant help you with that
+    - Sorry, I dont have that
+- intent: zaka_program_command
+  examples: |
+    - I want to register to a program.
+    - register me to a program
+    - i want to register for the [computer vision](topic) program
+    - register me to the [ai](topic) program with this email [ejad.home@gmail.com](email)
+    - my name is [Jad Eid](name) and I want to register for a program
+    - subscribe to a program
+    - subscribe to the [ML](topic)
+    - please subscribe to a program
+    - i want the [computer vision](topic) program
+    - subscribe program
+    - register program
+    - I want to subscribe to the [philosophy](topic) program
+    - My name is [Jad Eid](name) and I want to subscribe to the [Machine Learning](topic) program
+    - Hi, I'm [Chris](name) and I want to register for the [AI](topic) program
+    - Hi, I'm [Zeus](name), I am [100](age) years old and I want to register for the [ML](topic) with the [ejad.home@gmail.com](email)
+    - I want to register to a program with the following email [jad@zaka.ai](email)
+    - Give me the [Philosophy](topic) program. I am [Jad Eid](name) and I'm [15](age) years old
+    - I'm [Jad Eid](name) and I want to register for the [Chemistry](topic) lessons with [ejad.home@gmail.com](email)
+    - Let me have the [AI](topic), please
+    - Register me to a program. I am [Jad Eid](name) and I'm [20](age) years old
+    - My number is [+96170406483](phone) and I want the [ML](topic) program
+
+- intent: zaka_info_query
+  examples: |
+    - what is ZAKA?
+    - what does ZAKA provide?
+    - what is zaka?
+    - what does zaka do?
+    - what services does zaka provide?
+
+- intent: form_why_information
+  examples: |
+    - why do you need my email?
+    - why do you need my name?
+    - why?
+    - what is the point of this?
+    - why do you need this info?
+    - why do you care?
+    - are you collecting my information?
+    - what is this for?
+    - why ask me for all this info?
+    - where will this info be stored?
+    - why do you need the course?
+    - what courses can I register for?
+    - why are we doing this?
+    - what are you collecting my info for?
+    - what is all this for?
+    - y u do this?
+    - are you stealing my info?
+    - r u going to hack me?
+    - what the fuck are you doing?
+    - why do you need my number?
+    - what is my email for?
+    - what is my number for?
+    - what is my name for?
+    - why do you need my age?
+    - are you trying to hack me?
+    - why are you asking?
+
+- intent: zaka_newsletter_query
+  examples: |
+    - do you have a newsletter?
+    - where can I find your newsletter?
+    - do you have a newsletter that I can subscribe to?
+    - does zaka have a newsletter?
+    - where is zaka's newsletter?
+    - i want to stay up to date with zaka news
+    - i want to remain updated
+    - keep me updated
+- intent: zaka_newsletter_command
+  examples: |
+    - subscribe to newsletter
+    - i want to subscribe to the newsletter
+    - newsletter subscription
+    - subscribe me to the newsletter
+    - take my email for the newsletter
+    - subscribe newsletter
+    - I also want to subscribe
+    - I wanna sign up for the newsletter.
+    - I want the newsletter
+    - I want to sign up for the newsletter
+    - I want to sign up for the newsletter.
+    - I want to subscribe to your newsletter
+    - I want to subscribing to the Rasa newsletter
+    - I would like to sign up for the newsletter.
+    - I would love to subscribe to a newsletter!
+    - I'd like to subscribe
+    - I'll subscribe to the newsletter
+    - Newsletter
+    - Newsletter please.
+    - Sign me up for the newsletter.
+    - Sign up.
+    - Subscribe
+    - Subscribe me to the newsletter please!
+    - Subscribe me to you newsletter
+    - Subscribe newsletter
+    - Subscribe to Rasa newsletter
+    - add me as your subscriber
+    - add me to the newsletter
+    - add me to the newsletter list
+    - add me to the subscription list
+    - but please sign me up for the newsletter!
+    - can i get emails from you
+    - can i sign up to the newsletter too?
+    - can i subscribe to news letter
+    - can you pelase subscribe me to the newsletter
+    - can you pelase subscribe me to the newsletter
+    - can you sign me up for the newsletter
+    - can you subscribe me to the newsletter
+    - do the newsletter then
+    - first lets sign up for the newsletter
+    - get a subscription
+    - get newsletter
+    - get the latest news from Rasa
+    - get the newsletter
+    - gimme the newsletter
+    - hello sara, can you subscribe me to the newsletter?
+    - how about the newsletter
+    - how about the newsletter signup
+    - how to subdcribe?
+    - i also want to sign up for the newsletter
+    - i go for the newsletter
+    - i just want to signup for our newsletter
+    - i just want to signup for your newsletter
+    - i need the newsletter
+    - i need this dope newsletter
+    - i need to be on the newsletter list
+    - i prefer to get the newsletter
+    - i want newsletter
+    - i want on that dope newsletter
+    - i want subscribe
+    - i want the newsletter
+    - i want to  suscribe
+    - i want to be part of the newsletter
+    - i want to get the newsletter
+    - i want to join the newsletter list
+    - i want to join the newsletter mails
+    - i want to receive the newsletter emails
+    - i want to receive the newsletter from now on
+    - i want to receive your nl
+    - i want to sign up for the newsletter
+    - i want to signup
+    - i want to signup for the newsletter
+    - i want to signup for the nl
+    - i want to signup for your newsletter
+    - i want to subscribe
+    - i want to subscribe to your newsletter
+    - i want to subsribe to the newsletter
+    - i would like to join the newsletter
+    - i would like to subscribe
+    - i would like to subscribe to your newsletter
+    - i would love to get the newsletter
+    - i would love to receive the rasa newsletter
+    - i'd like your newspaper please
+    - i'm craving the newsletter
+    - id like to receive the newsletter
+    - id like to subscribe
+    - join that newsletter
+    - let's make a subscribtion
+    - lets do the newsletter signup
+    - lets try the newsletter registration
+    - lets try the newsletter signup
+    - may i receive the newsletter from now on
+    - newletter
+    - news
+    - newsletter
+    - newsletter it is
+    - newsletter please
+    - newsletter pls
+    - newsletter registration
+    - newsletter registration first
+    - newsletter subscription
+    - newslettwr
+    - nl
+    - now i want to signup for the newsletter
+    - oh actually i want to get the newsletter
+    - please send me the newsletter
+    - please sign me up for the newsletter
+    - please subscribe me to your newsletter
+    - register me for the newsletter
+    - send me the newsletter
+    - sign me up for that newsletter
+    - sign me up for the rasa newsletter
+    - sign up
+    - sign up for newsletter
+    - sign up for the NL
+    - sign up newsletter
+    - sign up to the newsletter
+    - subcribe
+    - subscribe
+    - subscribe me to newsletter
+    - subscribe me to the newsletter
+    - subscribe to newsletter
+    - subscribe to our newsletter
+    - subscribe to the newsletter
+    - subscribe to your newsletter
+    - subscribing to our newsletter
+    - subscrime me
+    - subscription newsletter
+    - subsribing to our newsletter
+    - to make a subscribtion
+    - what about signing up for the newsletter?
+    - yeaaah lets go for the newsletter
+    - yeah how about the newsletter
+    - yes I would like to subscribe
+    - yes subscribe me
+- intent: zaka_educationtracks_query
+  examples: |
+    - what are the education tracks?
+    - what programs do you provide?
+    - what do you teach?
+    - what are your programs?
+    - how do you teach?
+    - how are the programs structured?
+    - teaching programs
+    - education tracks
+    - programs
+    - tracks
+    - courses
+    - educational programs
+    - what are the fundamental tracks?
+    - what do you provide?
+    - how do you teach these programs?
+    - fundamental education
+    - fundamental
+    - basics
+    - what does zaka teach?
+    - how does zaka teach fundamental programs?
+    - what fundamental programs are available?
+    - what fundamental tracks are available?
+    - what are the specialization tracks?
+    - what specialized tracks do you provide?
+    - how do you teach these specialized programs?
+    - specialized education
+    - specialized
+    - what specialized tracks does zaka teach?
+    - how does zaka teach specialized programs?
+    - what specialized programs are available?
+    - what specialized tracks are available?
+    - i want to learn about AI
+    - does zaka teach AI?
+    - i want to learn about ai and I am lost
+    - i dont know where to start with AI
+#- intent: zaka_domaindefinition_entity
+#  examples: |
+#    - what is [machine learning](topic)?
+#    - what is [artificial intelligence](topic)?
+#    - what is [ai](topic)?
+#    - what is [ml](topic)?
+#    - [ai](topic)
+#    - [ml](topic)
+#    - [artificial intelligence](topic)
+#    - [machine learning](topic)
+#    - what is a [neural network](topic)?
+#    - what is a [NN](topic)?
+#    - [neural network](topic)
+#    - [NN](topic)
+#    - [Artificial Neural Network](topic)
+#    - why use a [neural network](topic)?
+#    - how to use [neural network](topic)
+#    - how to create a [neural network](topic)
+#    - what is [deep learning](topic)?
+#    - [deep learning](topic)
+#    - why use [deep learning](topic)?
+#    - what is [data science](topic)?
+#    - [data science](topic)
+#    - why is [data science](topic) important?
+#    - how to use [data science](topic)
+#    - what is [natural language processing](topic)?
+#    - what is [NLP](topic)?
+#    - [natural language processing](topic)
+#    - why is [NLP](topic) important?
+#    - what is [time series analysis](topic)?
+#    - [time series analysis](topic)
+#    - how do we use [time series analysis](topic)?
+#    - what is [computer vision](topic)?
+#    - [computer vision](topic)
+#    - why use [computer vision](topic)?
+#    - what are [recommender systems](topic)?
+#    - [recommender systems](topic)
+#    - why use [recommender systems](topic)?
+#    - what is [reinforcement learning](topic)?
+#    - [reinforcement learning](topic)
+#    - why use [reinforcement learning](topic)?
+#- intent: zaka_domainprogram_entity
+#  examples: |
+#    - what is the [machine learning](topic) program?
+#    - what is the [artificial intelligence](topic) program?
+#    - what is the [ai](topic) program?
+#    - what is the [ml](topic) program?
+#    - [ai](topic) program
+#    - [ml](topic) program
+#    - [artificial intelligence](topic) program
+#    - [machine learning](topic) program
+#    - what is the [machine learning](topic) specialization?
+#    - what is the [artificial intelligence](topic) specialization?
+#    - what is the [ai](topic) specialization?
+#    - what is the [ml](topic) specialization?
+#    - [ai](topic) specialization
+#    - [ml](topic) specialization
+#    - [artificial intelligence](topic) specialization
+#    - [machine learning](topic) specialization
+#    - what is the [neural network](topic) program?
+#    - what is the [NN](topic) program?
+#    - [neural network](topic) track
+#    - [NN](topic) program
+#    - [Artificial Neural Network](topic) specialization
+#    - what is the [deep learning](topic) program?
+#    - [deep learning](topic) program
+#    - what is the [data science](topic) program?
+#    - [data science](topic) track
+#    - what is the [natural language processing](topic) track?
+#    - what is the [NLP](topic) track?
+#    - [natural language processing](topic) specialization
+#    - what is the [time series analysis](topic) program?
+#    - [time series analysis](topic) specialization
+#    - what is the [computer vision](topic) program?
+#    - [computer vision](topic) track
+#    - what is the [recommender systems](topic) program?
+#    - [recommender systems](topic) specialization
+#    - what is the [reinforcement learning](topic) track?
+#    - [reinforcement learning](topic) specialization
+- intent: zaka_machinelearning_definition_query
+  examples: |
+    - what is machine learning?
+    - how do you define machine learning?
+    - how does machine learning work?
+    - why learn about machine learning?
+    - what is artificial intelligence?
+    - how do you define artificial intelligence?
+    - how does artificial intelligence work?
+    - why learn about artificial intelligence?
+- intent: zaka_datascience_definition_query
+  examples: |
+    - what is data science?
+    - how do you define data science?
+    - how does data science work?
+    - why learn about data science?
+- intent: zaka_deeplearning_definition_query
+  examples: |
+    - what is deep learning?
+    - how do you define deep learning?
+    - how does deep learning work?
+    - why learn about deep learning?
+- intent: zaka_computervision_definition_query
+  examples: |
+    - what is computer vision?
+    - how do you define computer vision?
+    - how does computer vision work?
+    - why learn about computer vision?
+- intent: zaka_naturallanguageprocessing_definition_query
+  examples: |
+    - what is Natural language processing?
+    - how do you define Natural language processing?
+    - how does Natural language processing work?
+    - why learn about Natural language processing?
+- intent: zaka_timeseriesanalysis_definition_query
+  examples: |
+    - what is time series analysis?
+    - how do you define time series analysis?
+    - how does time series analysis work?
+    - why learn about time series analysis?
+- intent: zaka_reinforcementlearning_definition_query
+  examples: |
+    - what is Reinforcement learning?
+    - how do you define Reinforcement learning?
+    - how does Reinforcement learning work?
+    - why learn about Reinforcement learning?
+- intent: zaka_recommendersystems_definition_query
+  examples: |
+    - what is recommender systems?
+    - how do you define recommender systems?
+    - how does recommender systems work?
+    - why learn about recommender systems?
+
+- intent: zaka_additionalinfo_query
+  examples: |
+    - where can I learn more?
+    - how are these courses administered?
+    - how do you deliver these courses?
+    - what time are these courses?
+    - how are these courses scheduled?
+    - schedule
+    - can I talk to a human?
+    - how can I contact you?
+    - how can I contact zaka?
+    - can I contact an employee?
+    - can I contact a member?
+- intent: zaka_program_join
+  examples: |
+    - how can I join the zaka program?
+    - how can i join the ML program?
+    - how can I join the education program?
+    - how can i subscribe with zaka?
+    - how do i begin learning with zaka?
+    - where do i sign up to the programs?
+    - and how do i sign up to this program?
+    - how do i sign up?
+    - where do i sign up?
+    - how do i join this program?
+    - how do i start learning?
+    - where can i join the program?
+- intent: zaka_identity_query
+  examples: |
+    - who is on the team?
+    - who works at ZAKA?
+    - who can I talk to?
+    - who are the members of ZAKA?
+    - who is in ZAKA?
+    - members of zaka
+    - team members of zaka
+    - zaka team
+    - who works at zaka?
+    - zaka employees
+    - working people
+    - who is the zaka team?
+    - working at zaka
+    - who is the CEO of zaka?
+- intent: zaka_tools
+  examples: |
+    - what do i need to learn
+    - what tools do i need?
+    - do I need anything before I start learning?
+    - are there any prerequisites
+    - do i need any background information
+    - do i need prior knowledge on the subject
+    - do i need to learn anything on my own
+- intent: zaka_origins_query
+  examples: |
+    - Who founded Zaka?
+    - Who thought of Zaka?
+    - Who made zaka?
+    - Zaka founder
+    - when was zaka made?
+    - when did zaka start?
+    - where does zaka originate from?
+    - zaka origins
+    - zaka creation
+    - how was zaka created?
+    - how old is zaka?
+- intent: zaka_employment_query
+  examples: |
+    - Any job opening?
+    - Zaka careers
+    - Careers
+    - Careers at Zaka
+    - can i get a job at Zaka?
+    - job openings at Zaka
+    - Jobs
+    - how can i join zaka?
+    - how do i become a part of zaka?
+    - can I join zaka?
+- intent: zaka_clients_query
+  examples: |
+    - who are your clients?
+    - who usually orders these services?
+    - what is your userbase like?
+    - who do you teach?
+    - who is this aimed at?
+    - who can take these courses?
+    - am I eligible to take these courses?
+    - should I take these courses?
+    - can I take these courses?
+    - can I learn these courses?
+    - will I understand if i take this courses?
+    - is it difficult to understand?
+    - how difficult are these courses?
+- intent: zaka_future_query
+  examples: |
+    - what is next for ZAKA?
+    - where is ZAKA headed?
+    - what is the future for ZAKA?
+    - what are ZAKA's future plans?
+    - future plans
+    - next steps
+    - where is ZAKA going from here?
+    - where is zaka headed?
+    - What is Zaka's vison?
+    - Zaka's Goal?
+    - Zaka future
+    - Where will Zaka be in 10 years?
+- intent: zaka_link
+  examples: |
+    - link
+    - can you provide a link
+    - can you send me a link
+    - where is the zaka website
+    - what is the zaka website
+    - send me the zaka link
+    - send me the zaka website
+- intent: roze_info_query
+  examples: |
+    - tell me more about roze
+    - what is Roze
+    - Roze
+    - who is Roze
+    - what does Roze do?

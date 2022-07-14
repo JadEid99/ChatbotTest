@@ -1,0 +1,396 @@
+version: "2.0"
+rules:
+
+- rule: explain in form
+  condition:
+  - active_loop: register_training_form
+  steps:
+  - intent: form_why_information
+  - action: utter_response_why_info
+  - action: utter_ask_continue_form
+
+- rule: continue form
+  condition:
+  - active_loop: register_training_form
+  steps:
+  - action: utter_ask_continue_form
+  - intent: conversation_confirm
+  - action: register_training_form
+  - active_loop: null
+  - action: action_submit_register_training_form
+  - action: utter_tertiary_transition
+
+- rule: don't continue form
+  condition:
+  - active_loop: register_training_form
+  steps:
+  - action: utter_ask_continue_form
+  - intent: conversation_deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_tertiary_transition
+
+- rule: No information in form
+  condition:
+  - active_loop: register_training_form
+  steps:
+  - intent: entity_none
+  - action: utter_entity_none
+  - active_loop: null
+  - action: utter_secondary_transition
+
+- rule: stop form
+  condition:
+  - active_loop: register_training_form
+  steps:
+  - intent: conversation_stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_tertiary_transition
+
+- rule: machinelearning_query_form
+  condition:
+  - active_loop: register_training_form
+  steps:
+  - intent: zaka_machinelearning_definition_query
+  - action: utter_zaka_machinelearning_definition
+  - action: utter_ask_continue_form
+
+- rule: datascience_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_datascience_definition_query
+  - action: utter_zaka_datascience_definition
+  - action: utter_ask_continue_form
+
+- rule: deeplearning_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_deeplearning_definition_query
+  - action: utter_zaka_deeplearning_definition
+  - action: utter_ask_continue_form
+
+- rule: computervision_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_computervision_definition_query
+  - action: utter_zaka_computervision_definition
+  - action: utter_ask_continue_form
+
+- rule: naturallanguageprocessing_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_naturallanguageprocessing_definition_query
+  - action: utter_zaka_naturallanguageprocessing_definition
+  - action: utter_ask_continue_form
+
+- rule: timeseriesanalysis_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_timeseriesanalysis_definition_query
+  - action: utter_zaka_timeseriesanalysis_definition
+  - action: utter_ask_continue_form
+
+- rule: reinforcementlearning_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_reinforcementlearning_definition_query
+  - action: utter_zaka_reinforcementlearning_definition
+  - action: utter_ask_continue_form
+
+- rule: recommendersystems_query_form
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_recommendersystems_definition_query
+  - action: utter_zaka_recommendersystems_definition
+  - action: utter_ask_continue_form
+
+
+##########################################################################################
+##########################################################################################
+##########################################################################################
+
+- rule: conversation_good_introduction
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_introduction
+  - action: utter_conversation_hello
+  - action: utter_ask_continue_form
+
+- rule: conversation_botstate_good_introduction
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_bot_state
+  - action: utter_conversation_bot_purpose
+  - action: utter_ask_continue_form
+
+- rule: conversation_botchallenge
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botchallenge
+  - action: utter_conversation_iamabot
+  - action: utter_ask_continue_form
+
+- rule: conversation_hug
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_hug
+  - action: utter_conversation_hug
+  - action: utter_ask_continue_form
+
+- rule: conversation_life_meaning
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_meaning_life
+  - action: utter_conversation_life_meaning
+  - action: utter_ask_continue_form
+
+- rule: conversation_bot_location
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botlocation
+  - action: utter_conversation_location
+  - action: utter_ask_continue_form
+
+- rule: conversation_botorigins
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botorigins_query
+  - action: utter_conversation_origins
+  - action: utter_ask_continue_form
+
+- rule: conversation_botcreation
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botcreation_query
+  - action: utter_conversation_creation
+  - action: utter_ask_continue_form
+
+- rule: conversation_impressed
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botimpresses
+  - action: utter_conversation_impressed
+  - action: utter_ask_continue_form
+
+- rule: conversation_sucks
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botsucks
+  - action: utter_conversation_botsucks
+  - action: utter_ask_continue_form
+
+- rule: conversation_user_birthday
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_userbirthday
+  - action: utter_conversation_user_birthday
+  - action: utter_ask_continue_form
+
+- rule: conversation_bot_birthday
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_botbirthday
+  - action: utter_conversation_bot_birthday
+  - action: utter_ask_continue_form
+
+- rule: conversation_bot_introduction
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_meet
+  - action: utter_conversation_bot_introduction
+  - action: utter_ask_continue_form
+
+- rule: conversation_bot_gender
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_gender
+  - action: utter_conversation_gender
+  - action: utter_ask_continue_form
+
+- rule: conversation_bot_pleasure
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_pleasure
+  - action: utter_conversation_pleasure
+  - action: utter_ask_continue_form
+
+- rule: conversation_confused
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_confused
+  - action: utter_conversation_confused
+  - action: utter_ask_continue_form
+
+- rule: conversation_joke
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_joke
+  - action: get_joke
+  - action: utter_ask_continue_form
+
+- rule: conversation_funny
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_laughing
+  - action: utter_conversation_funny
+  - action: utter_ask_continue_form
+
+- rule: conversation_lame
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_lame
+  - action: utter_conversation_lame
+  - action: utter_ask_continue_form
+
+- rule: conversation_assist
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_assist
+  - action: utter_conversation_assist
+  - action: utter_ask_continue_form
+
+- rule: zaka_info
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_info_query
+  - action: utter_zaka_info
+  - action: utter_ask_continue_form
+
+- rule: roze_info
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: roze_info_query
+  - action: utter_roze_info
+  - action: utter_ask_continue_form
+
+- rule: newsletter_query_subscribe
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_newsletter_query
+  - action: utter_ask_continue_form
+
+- rule: newsletter_command_subscribe
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_newsletter_command
+  - action: utter_ask_continue_form
+
+- rule: zaka_educationtracks
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_educationtracks_query
+  - action: utter_zaka_specific_tracks
+  - action: utter_ask_continue_form
+
+- rule: zaka_additionalinfo
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_additionalinfo_query
+  - action: utter_zaka_programs_more_info
+  - action: utter_ask_continue_form
+
+- rule: zaka_identity
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_identity_query
+  - action: utter_zaka_members
+  - action: utter_ask_continue_form
+
+- rule: zaka_origins
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_origins_query
+  - action: utter_zaka_origins
+  - action: utter_ask_continue_form
+
+- rule: zaka_openings
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_employment_query
+  - action: utter_zaka_openings
+  - action: utter_ask_continue_form
+
+- rule: zaka_clients
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_clients_query
+  - action: utter_zaka_course_clients
+  - action: utter_ask_continue_form
+
+- rule: zaka_future
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_future_query
+  - action: utter_zaka_future
+  - action: utter_ask_continue_form
+
+- rule: zaka_tools
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_tools
+  - action: utter_zaka_tools
+  - action: utter_ask_continue_form
+
+- rule: zaka_random
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: conversation_random
+  - action: utter_conversation_random
+  - action: utter_ask_continue_form
+
+- rule: zaka_join_program
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_program_join
+  - action: utter_zaka_program_join
+  - action: utter_ask_continue_form
+
+- rule: zaka_link
+  condition:
+    - active_loop: register_training_form
+  steps:
+  - intent: zaka_link
+  - action: utter_zaka_link
+  - action: utter_ask_continue_form

@@ -1,0 +1,353 @@
+version: "2.0"
+
+stories:
+- story: conversation_introduction
+  steps:
+  - action: utter_conversation_greet
+
+- story: conversation_good_introduction
+  steps:
+  - intent: conversation_introduction
+  - action: utter_conversation_greet
+  - action: utter_conversation_state_query
+  - intent: conversation_goodstate
+  - action: utter_conversation_userstate_good
+  - action: utter_primary_transition
+
+- story: conversation_good_introduction_reply
+  steps:
+  - action: utter_conversation_greet
+  - intent: conversation_introduction
+  - action: utter_conversation_state_query
+  - intent: conversation_goodstate_followup
+  - action: utter_conversation_bot_purpose
+  - action: utter_primary_transition
+
+- story: conversation_bad_introduction
+  steps:
+  - action: utter_conversation_greet
+  - intent: conversation_introduction
+  - action: utter_conversation_state_query
+  - intent: conversation_badstate
+  - action: utter_conversation_userstate_bad
+  - action: utter_primary_transition
+
+- story: conversation_botstate_good_introduction
+  steps:
+  - action: utter_conversation_greet
+  - intent: conversation_bot_state
+  - action: utter_conversation_bot_purpose
+  - action: utter_conversation_state_query
+  - intent: conversation_goodstate
+  - action: utter_conversation_userstate_good
+  - action: utter_primary_transition
+
+- story: conversation_botstate_bad_introduction
+  steps:
+  - action: utter_conversation_greet
+  - intent: conversation_bot_state
+  - action: utter_conversation_bot_purpose
+  - action: utter_conversation_state_query
+  - intent: conversation_badstate
+  - action: utter_conversation_userstate_bad
+  - action: utter_primary_transition
+
+- story: conversation_botchallenge
+  steps:
+  - action: utter_conversation_greet
+  - intent: conversation_botchallenge
+  - action: utter_conversation_iamabot
+  - action: utter_secondary_transition
+
+- story: conversation_conclusion
+  steps:
+  - intent: conversation_conclusion
+  - action: utter_conversation_conclusion
+
+- story: conversation_hug
+  steps:
+  - intent: conversation_hug
+  - action: utter_conversation_hug
+  - action: utter_secondary_transition
+
+- story: conversation_life_meaning
+  steps:
+  - intent: conversation_meaning_life
+  - action: utter_conversation_life_meaning
+  - action: utter_secondary_transition
+
+- story: conversation_bot_location
+  steps:
+  - intent: conversation_botlocation
+  - action: utter_conversation_location
+  - action: utter_secondary_transition
+
+- story: conversation_botorigins
+  steps:
+  - intent: conversation_botorigins_query
+  - action: utter_conversation_origins
+  - action: utter_secondary_transition
+
+- story: conversation_botcreation
+  steps:
+  - intent: conversation_botcreation_query
+  - action: utter_conversation_creation
+  - action: utter_secondary_transition
+
+- story: conversation_impressed
+  steps:
+  - intent: conversation_botimpresses
+  - action: utter_conversation_impressed
+  - action: utter_secondary_transition
+
+- story: conversation_sucks
+  steps:
+  - intent: conversation_botsucks
+  - action: utter_conversation_botsucks
+  - action: utter_secondary_transition
+
+- story: conversation_user_birthday
+  steps:
+  - intent: conversation_userbirthday
+  - action: utter_conversation_user_birthday
+  - action: utter_primary_transition
+
+- story: conversation_bot_birthday
+  steps:
+  - intent: conversation_botbirthday
+  - action: utter_conversation_bot_birthday
+  - action: utter_secondary_transition
+
+- story: conversation_bot_introduction
+  steps:
+  - intent: conversation_meet
+  - action: utter_conversation_bot_introduction
+  - action: utter_secondary_transition
+
+- story: conversation_bot_gender
+  steps:
+  - intent: conversation_botsucks
+  - action: utter_conversation_gender
+  - action: utter_secondary_transition
+
+- story: conversation_user_talk
+  steps:
+  - intent: conversation_talk
+  - action: utter_conversation_talk
+
+- story: conversation_wait
+  steps:
+  - intent: conversation_wait
+  - action: utter_conversation_wait
+
+- story: conversation_bot_gender
+  steps:
+  - intent: conversation_pleasure
+  - action: utter_conversation_pleasure
+  - action: utter_secondary_transition
+
+- story: conversation_confused
+  steps:
+  - intent: conversation_confused
+  - action: utter_conversation_confused
+  - action: utter_secondary_transition
+
+- story: conversation_joke
+  steps:
+  - intent: conversation_joke
+  - action: get_joke
+  - action: utter_secondary_transition
+
+- story: conversation_funny
+  steps:
+  - intent: conversation_laughing
+  - action: utter_conversation_funny
+  - action: utter_secondary_transition
+
+- story: conversation_lame
+  steps:
+  - intent: conversation_lame
+  - action: utter_conversation_lame
+  - action: utter_secondary_transition
+
+- story: conversation_assist
+  steps:
+  - intent: conversation_assist
+  - action: utter_conversation_assist
+  - action: utter_secondary_transition
+
+- story: zaka_info
+  steps:
+  - intent: zaka_info_query
+  - action: utter_zaka_info
+  - action: utter_secondary_transition
+
+- story: roze_info
+  steps:
+  - intent: roze_info_query
+  - action: utter_roze_info
+  - action: utter_secondary_transition
+
+- story: newsletter_query_subscribe
+  steps:
+  - intent: zaka_newsletter_query
+  - action: utter_newsletter_query
+  - intent: conversation_confirm
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_tertiary_transition
+
+
+- story: newsletter_command_subscribe
+  steps:
+  - intent: zaka_newsletter_command
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_tertiary_transition
+
+
+- story: zaka_program_subscribe
+  steps:
+  - intent: zaka_program_command
+  - action: register_training_form
+  - active_loop: register_training_form
+  - active_loop: null
+  - action: action_submit_register_training_form
+  - action: utter_tertiary_transition
+
+- story: newsletter_query_deny
+  steps:
+  - intent: zaka_newsletter_query
+  - action: utter_newsletter_query
+  - intent: conversation_deny
+  - action: utter_tertiary_transition
+
+- story: zaka_educationtracks
+  steps:
+  - intent: zaka_educationtracks_query
+  - action: utter_zaka_specific_tracks
+  - action: utter_tertiary_transition
+
+#- story: zaka_educationtracks
+#  steps:
+#  - intent: zaka_domaindefinition_entity
+#  - action: return_definition
+#  - action: utter_secondary_transition
+#
+#- story: zaka_educationprograms
+#  steps:
+#  - intent: zaka_domainprogram_entity
+#  - action: return_program
+#  - action: utter_secondary_transition
+
+- story: zaka_additionalinfo
+  steps:
+  - intent: zaka_additionalinfo_query
+  - action: utter_zaka_programs_more_info
+  - action: utter_secondary_transition
+
+- story: zaka_identity
+  steps:
+  - intent: zaka_identity_query
+  - action: utter_zaka_members
+  - action: utter_secondary_transition
+
+- story: zaka_origins
+  steps:
+  - intent: zaka_origins_query
+  - action: utter_zaka_origins
+  - action: utter_secondary_transition
+
+- story: zaka_openings
+  steps:
+  - intent: zaka_employment_query
+  - action: utter_zaka_openings
+  - action: utter_secondary_transition
+
+- story: zaka_clients
+  steps:
+  - intent: zaka_clients_query
+  - action: utter_zaka_course_clients
+  - action: utter_secondary_transition
+
+- story: zaka_future
+  steps:
+  - intent: zaka_future_query
+  - action: utter_zaka_future
+  - action: utter_secondary_transition
+
+- story: zaka_tools
+  steps:
+  - intent: zaka_tools
+  - action: utter_zaka_tools
+  - action: utter_secondary_transition
+
+- story: zaka_random
+  steps:
+  - intent: conversation_random
+  - action: utter_conversation_random
+  - action: utter_secondary_transition
+
+- story: zaka_join_program
+  steps:
+  - intent: zaka_program_join
+  - action: utter_zaka_program_join
+  - action: utter_secondary_transition
+
+- story: zaka_link
+  steps:
+  - intent: zaka_link
+  - action: utter_zaka_link
+  - action: utter_secondary_transition
+
+- story: zaka_machinelearning_definition_query
+  steps:
+  - intent: zaka_machinelearning_definition_query
+  - action: utter_zaka_machinelearning_definition
+  - action: utter_secondary_transition
+
+- story: zaka_datascience_definition_query
+  steps:
+  - intent: zaka_datascience_definition_query
+  - action: utter_zaka_datascience_definition
+  - action: utter_secondary_transition
+
+- story: zaka_deeplearning_definition_query
+  steps:
+  - intent: zaka_deeplearning_definition_query
+  - action: utter_zaka_deeplearning_definition
+  - action: utter_secondary_transition
+
+- story: zaka_computervision_definition_query
+  steps:
+  - intent: zaka_computervision_definition_query
+  - action: utter_zaka_computervision_definition
+  - action: utter_secondary_transition
+
+- story: zaka_naturallanguageprocessing_definition_query
+  steps:
+  - intent: zaka_naturallanguageprocessing_definition_query
+  - action: utter_zaka_naturallanguageprocessing_definition
+  - action: utter_secondary_transition
+
+- story: zaka_timeseriesanalysis_definition_query
+  steps:
+  - intent: zaka_timeseriesanalysis_definition_query
+  - action: utter_zaka_timeseriesanalysis_definition
+  - action: utter_secondary_transition
+
+- story: zaka_reinforcementlearning_definition_query
+  steps:
+  - intent: zaka_reinforcementlearning_definition_query
+  - action: utter_zaka_reinforcementlearning_definition
+  - action: utter_secondary_transition
+
+- story: zaka_recommendersystems_definition_query
+  steps:
+  - intent: zaka_recommendersystems_definition_query
+  - action: utter_zaka_recommendersystems_definition
+  - action: utter_secondary_transition

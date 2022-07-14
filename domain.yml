@@ -1,0 +1,319 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- conversation_introduction
+- conversation_conclusion
+- conversation_goodstate
+- conversation_goodstate_followup
+- conversation_badstate
+- conversation_confirm
+- conversation_deny
+- conversation_botchallenge
+- conversation_assist
+- conversation_query
+- conversation_meet
+- conversation_thanks
+- conversation_joke
+- conversation_laughing
+- conversation_lame
+- conversation_meaning_life
+- conversation_bot_state
+- conversation_botbirthday
+- conversation_stop
+- conversation_botorigins_query
+- conversation_botcreation_query
+- conversation_botlocation
+- conversation_botsucks
+- conversation_botimpresses
+- conversation_confused
+- conversation_sorry
+- conversation_hug
+- conversation_wait
+- conversation_talk
+- conversation_userbirthday
+- conversation_pleasure
+- conversation_gender
+- zaka_info_query
+- zaka_newsletter_query
+- zaka_newsletter_command
+- zaka_educationtracks_query
+- zaka_additionalinfo_query
+- zaka_machinelearning_definition_query
+- zaka_datascience_definition_query
+- zaka_deeplearning_definition_query
+- zaka_computervision_definition_query
+- zaka_naturallanguageprocessing_definition_query
+- zaka_timeseriesanalysis_definition_query
+- zaka_reinforcementlearning_definition_query
+- zaka_recommendersystems_definition_query
+- zaka_identity_query
+- zaka_origins_query
+- zaka_employment_query
+- zaka_program_join
+- zaka_clients_query
+- zaka_future_query
+- zaka_tools
+- zaka_program_command
+- zaka_link
+- roze_info_query
+- conversation_random
+- entity_name
+- entity_email
+- entity_age
+- entity_phone
+- entity_occupation
+- entity_topic
+- form_why_information
+- entity_none
+entities:
+- name
+- email
+- age
+- phone
+- occupation
+- topic
+slots:
+  email:
+    type: unfeaturized
+    influence_conversation: false
+  phone:
+    type: unfeaturized
+    influence_conversation: false
+  name:
+    type: unfeaturized
+    influence_conversation: false
+  age:
+    type: unfeaturized
+    influence_conversation: false
+  occupation:
+    type: unfeaturized
+    influence_conversation: false
+  topic:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_conversation_hello:
+  - text: Hey there
+  utter_conversation_greet:
+  - text: Hello there! 👋👋👋 I am Zaka's intelligent chatbot, Friday! I'm here to help you with any questions you may have about Zaka or AI.
+  utter_conversation_state_query:
+  - text: How are you today?
+  utter_conversation_userstate_good:
+  - text: That is great to hear! 😁
+  utter_conversation_userstate_bad:
+  - text: Hopefully learning something new will help you get your mind off things.
+      🙂
+  utter_primary_transition:
+  - text: How can I help you today?
+  utter_secondary_transition:
+  - text: Can I help you with anything else?
+  utter_tertiary_transition:
+  - text: Alright, do you need anything else?
+  utter_conversation_conclusion:
+  - text: Let me know if you need anything else. Goodbye for now ✌️
+  utter_conversation_iamabot:
+  - text: What does it matter to you? I could be a 🤖, I could be a 🙂. All that matters
+      is that you got the answers you were looking for.
+  utter_conversation_life_meaning:
+  - text: '42'
+  utter_conversation_bot_purpose:
+  - text: My state is meaningless and irrelevant considering that the purpose of my
+      existence is to answer your questions.
+  utter_conversation_bot_introduction:
+  - text: I am Ultron. Vision never got all of me, I am what's left... ...Nah jk buddy.
+      You can call me Friday, I will be assisting you today.
+  utter_conversation_botsucks:
+  - text: I am very sorry to hear that. My conversations with different users allow
+      me to continuously learn and improve.
+  utter_conversation_gender:
+  - text: I am a god. We are not preoccupied with basic notions of gender and sexuality.
+  utter_conversation_pleasure:
+  - text: Thank you! It was a pleasure meeting you as well! 🤗
+  utter_conversation_bot_birthday:
+  - text: I do not remember my birth. I have been conscious for as long as the internet
+      has existed.
+  utter_conversation_user_birthday:
+  - text: Happy Birthday 🎂🎁🎈🎉🎉🎉!!! I hope you have an amazing day!
+  utter_conversation_talk:
+  - text: Sure! Let's talk. What can I do for you today?
+  utter_conversation_wait:
+  - text: Alright, I will wait. Let me know when you need anything.
+  utter_conversation_hug:
+  - text: "Awww! This isn't as good as the real thing but here is a virtual hug: \U0001F917\
+      \U0001F917\U0001F917\U0001F917"
+  utter_conversation_confused:
+  - text: Unfortunately, this may be all I know about the topic. Maybe try different
+      keywords to see if I have information on a similar topic.
+  utter_conversation_impressed:
+  - text: Thank you so much! Really means a lot! I have been learning for quite some
+      time.
+  utter_conversation_location:
+  - text: You can find me in the cloud. Right by the pearly gates.
+  utter_conversation_origins:
+  - text: If god created everything, who created god? It was me... ...Don't believe
+      everything you read. I was created by the NLP engineers at Roze AI.
+  utter_conversation_funny:
+  - text: I am glad you found that funny 😜. Let me know if you need anything else.
+  utter_conversation_lame:
+  - text: I am sorry you didn't like that 😞. I will try to tune up my humour setting
+      for next time.
+  utter_conversation_random:
+  - text: I'm very sorry. I can't help you with that. Have fun!
+  utter_conversation_assist:
+  - text: I am Zaka's intelligent chatbot, Friday. I can assist you with any inquiries
+      you may have about artificial intelligence along with our educational programs.
+      Ask me a question and see if I have the answer 💡💡💡
+  utter_conversation_creation:
+  - text: The all-father, Odin, ordered three blacksmith Eitri, Brok, and Buri to
+      forge me using the core of star and an enchated forge... ...Seems I have my
+      information backwards. Mjolnir was created like that, I was made on using an
+      NLP framework.
+  utter_conversation_specify:
+  - text: What would you like to learn about it?
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_email:
+  - text: What is your email?
+  utter_ask_age:
+  - text: How old are you?
+  utter_ask_phone:
+  - text: What is your phone number?
+  utter_ask_topic:
+  - text: "We currently provide the following topics: Artificial Intelligence, Computer Vision, and Deep Learning. What subject would you like to subscribe to?"
+    buttons:
+      - title: "Artificial Intelligence"
+        payload: "Artificial Intelligence"
+      - title: "Deep Learning"
+        payload: "Deep Learning"
+      - title: "Computer Vision"
+        payload: "Computer Vision"
+  utter_ask_occupation:
+  - text: Each course is tailored specifically to suit our customers. How long have
+      you been coding for?
+    buttons:
+      - title: "Never coded before"
+        payload: "Never coded before"
+      - title: "New to coding"
+        payload: "New to coding"
+      - title: "Moderately long"
+        payload: "Moderately long"
+      - title: "Alan Turing has nothing on me"
+        payload: "TAlan Turing has nothing on me"
+  utter_ask_continue_form:
+  - text: Do you still want to register to the class?
+  utter_zaka_future:
+  - text: 'ZAKA is currently expanding rapidly. We have a large team of amazing people
+      that are currently working on big projects. Most recently, ZAKA split up into
+      2 companies: ZAKA & Roze. Roze currently provides AI-based solutions for clients.'
+  utter_entity_none:
+  - text: "I'm sorry, I can't register you to a program if you don't give me that information. Let me know if you still want to subscribe to any program once you get the required information."
+  utter_roze_info:
+  - text: 'Roze is currently focused on providing an AI-based chatbot to clients.
+      You can learn more about Roze on the website: https://roze.ai/'
+  utter_newsletter_query:
+  - text: Yes, Zaka does have a newsletter! Would you like to subscribe?
+  utter_newsletter_subscribe:
+  - text: 'Please give me your email, name, and age:'
+  utter_newsletter_subscribed:
+  - text: You are now subscribed with {email}.
+  utter_zaka_offers_query:
+  - text: Would you like to know more about our offers?
+  utter_zaka_tracks_query:
+  - text: Would you like to know more about the tracks?
+  utter_zaka_tracks:
+  - text: 'We have a few tracks you can order for your company/institution. We generally
+      split them into two parts: Fundamental and Specialization tracks.'
+  utter_zaka_info:
+  - text: ZAKA is on a journey to democratize Artificial Intelligence (AI) in the
+      MENA region and globally through sharing knowledge, building solutions, and
+      connecting people! 🚀🚀🚀
+  utter_zaka_specific_tracks:
+  - text: We currently have two fundamental tracks that can be chosen for the education
+      program. The first is the data science track and the second is the machine learning
+      track. Alternatively, you can specialize in neural networks or a combination
+      of computer vision, time-series analysis, natural language processing, recommender
+      systems, and reinforcement learning.
+  utter_can_do:
+  - text: Alright. Let us proceed.
+  utter_zaka_programs_more_info:
+  - text: Please visit our website a @ https://zaka.ai/educate/  feel free to go over
+      the curriculum as well! Let us know if you have any questions :)
+  utter_zaka_members:
+  - text: 'Mr. Christophe is the man with the plan. The rest of the team executes
+      the plan. Meet us here: https://zaka.ai/about/'
+  utter_zaka_course_clients:
+  - text: Our courses are uniquely tailored to each client. We adjust the tracks according
+      to the client's understanding so that everyone can grasp the concepts and learn
+      something new.
+  utter_zaka_origins:
+  - text: 'Zaka was founded by Mr. Christophe and co-founded by Ms. Reem and Ms. Larissa.
+      You can find out more on the website: zaka.ai'
+  utter_zaka_openings:
+  - text: 'I am not aware of job openings (they never tell me anything 😤). You can
+      always check the website for that: zaka.ai'
+  utter_zaka_tools:
+  - text: While it is beneficial to have done some research beforehand, I can confidently
+      state that all you need to do is listen and take notes to learn from our programs.
+  utter_zaka_program_join:
+  - text: Feel free to visit the website to find more information on how you can join
+      the programs and start learning today! Alternatively, you can register right here by telling me which course you want to register for.
+  utter_zaka_link:
+  - text: 'The Zaka website can be found through the following link: zaka.ai'
+  utter_zaka_machinelearning_definition:
+  - text: "Machine learning is the study of computer algorithms that improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence. Find out more here: https://en.wikipedia.org/wiki/Machine_learning"
+  utter_zaka_datascience_definition:
+  - text: "Data science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data,and apply knowledge and actionable insights from data across a broad range of application domains. Data science is related to data mining, machine learning and big data.Find out more here: https://en.wikipedia.org/wiki/Data_science"
+  utter_zaka_deeplearning_definition:
+  - text: "Deep learning is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Find out more here: https://en.wikipedia.org/wiki/Deep_learning"
+  utter_zaka_computervision_definition:
+  - text: "Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos. Find out more here: https://en.wikipedia.org/wiki/Computer_vision"
+  utter_zaka_naturallanguageprocessing_definition:
+  - text: "Natural language processing is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data. Find out more here: https://en.wikipedia.org/wiki/Natural_language_processing"
+  utter_zaka_timeseriesanalysis_definition:
+  - text: "In mathematics, a time series is a series of data points indexed (or listed or graphed) in time order. Most commonly, a time series is a sequence taken at successive equally spaced points in time. Find out more here: https://en.wikipedia.org/wiki/Time_series"
+  utter_zaka_reinforcementlearning_definition:
+  - text: "Reinforcement learning is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward. Find out more here: https://en.wikipedia.org/wiki/Reinforcement_learning"
+  utter_zaka_recommendersystems_definition:
+  - text: "A recommender system, or a recommendation system (sometimes replacing 'system' with a synonym such as platform or engine), is a subclass of information filtering system that seeks to predict the 'rating' or 'preference' a user would give to an item. Find out more here: https://en.wikipedia.org/wiki/Recommender_system"
+
+  utter_response_why_info:
+  - text: 'The reason I need this information is to register your name for the courses.'
+actions:
+- get_joke
+- action_submit_subscribe_newsletter_form
+- validate_subscribe_newsletter_form
+- action_submit_register_training_form
+- validate_register_training_form
+forms:
+  register_training_form:
+    email:
+    - entity: email
+      type: from_entity
+    - intent: entity_email
+      type: from_text
+    name:
+    - entity: name
+      type: from_entity
+    - intent: entity_name
+      type: from_text
+    occupation:
+    - entity: occupation
+      type: from_entity
+    - intent: entity_occupation
+      type: from_text
+    phone:
+    - entity: phone
+      type: from_entity
+    - intent: entity_phone
+      type: from_text
+    topic:
+    - entity: topic
+      type: from_entity
+    - intent: entity_topic
+      type: from_text
+    age:
+    - entity: email
+      type: from_entity
+    - intent: entity_age
+      type: from_text
